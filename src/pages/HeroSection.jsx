@@ -20,8 +20,8 @@ function Hero() {
                 <p className='text-white text-balance font-extralight lg:text-[16px] md:text-[14px] text-[10px]'>Is to demystify financial management in Indiaproviding intuitive and powerful tools to enhance financial health for everyone. We aim to be the financial compass for navigating economic well-being.</p>
             </div>
 
-            <div className=''>
-                <button className='bg-[#849BEB] p-2 rounded-lg ml-[55vw] mt-[5vh] mb-2 cursor-pointer hover:scale-105 transition-all'><p className='lg:text-[18px] text-[10px]'>Let's Get Started</p></button>
+            <div className='drop-shadow-purple h-[8rem]'>
+                <button className='bg-[#849BEB] p-2 rounded-lg ml-[55vw] mt-[3vh] mb-2 cursor-pointer hover:scale-105 transition-all'><p className='lg:text-[18px] text-[10px]'>Let's Get Started</p></button>
             </div>
         </div>
     )
