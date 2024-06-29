@@ -35,7 +35,7 @@ function FeatureSection() {
                     </div>
                     <p className='md:p-4 md:text-center lg:text-lg  md:text-sm text-xs text-slate-400 sm:text-balance'>Track your financial health with our dashboard. See your cash flow, investments, and overall financial status in realtime to stay aligned with your goals.</p>
                 </div>
-                <div value="3" className='md:col-span-4 col-span-5 lg:p-10 md:p-4 md:py-[5rem] p-4 bg-[#716f6f16] rounded-3xl drop-shadow-purple sm:h-[25vh] lg:min-h-[30rem] md:h-fit min-h-[13rem] shadow-[0_0px_20px_-3px_#849BEB] hover:shadow-[0_0px_30px_-8px_#849BEB] transition-all ease-linear box'>
+                <div value="3" className='md:col-span-4 col-span-5 lg:p-10 lg:pt-[5rem] md:p-4 md:py-[5rem] p-4 bg-[#716f6f16] rounded-3xl drop-shadow-purple sm:h-[25vh] lg:min-h-[30rem] md:h-fit min-h-[13rem] shadow-[0_0px_20px_-3px_#849BEB] hover:shadow-[0_0px_30px_-8px_#849BEB] transition-all ease-linear box'>
                     <div className='flex justify-center items-center md:gap-8 gap-2 md:mb-10 mb-4'>
                         <img src={ai_mentor} alt="" className='h-3 w-3 md:h-10 md:w-10' />
                         <h1 className='md:text-lg lg:text-3xl text-xs'>Unified Finance Hub</h1>
