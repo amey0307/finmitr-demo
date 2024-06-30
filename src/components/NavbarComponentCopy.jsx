@@ -42,6 +42,7 @@ function NavbarComponentCopy() {
             <div className='flex md:gap-5 gap-3 mt-4 mx-auto bg-[#849BEB] rounded-full items-center px-6 navbar z-10 w-fit h-10 text-white md:text-[16px] text-xs cursor-pointer'>
                 <a href='#hero' className='hover:scale-110 transition-all'>HOME</a>
                 <a href='#feature' className='hover:scale-110 transition-all'>FEATURE</a>
+                <a href='#services' className='hover:scale-110 transition-all'>SERVICES</a>
                 <a href='#vision' className='hover:scale-110 transition-all'>VISION</a>
                 <a href='#contact' className='hover:scale-110 transition-all'>CONTACT</a>
                 <button className='p-[4px] px-3 py-2 rounded-l-full rounded-r-full border-1 border-white text-nowrap text-black bg-white'>INSTALL APP</button>

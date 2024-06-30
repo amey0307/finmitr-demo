@@ -3,6 +3,7 @@ import NavbarComponentCopy from './components/NavbarComponentCopy.jsx'
 import Hero from './pages/HeroSection.jsx'
 import FeatureSection from './pages/FeatureSection.jsx'
 import VisionInfo from './pages/VisionInfo.jsx'
+import Recharge from './pages/Recharge.jsx'
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
       </div>
       <div id='feature'>
         <FeatureSection />
+      </div>
+      <div className='mt-4' id='services'>
+        <Recharge />
       </div>
       <div id='vision'>
         <VisionInfo />

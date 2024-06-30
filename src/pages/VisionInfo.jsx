@@ -5,7 +5,7 @@ import wallet from '../assets/vision/wallet.svg'
 
 function VisionInfo() {
     return (
-        <div className='min-h-[70vh] flex flex-col gap-36 overflow-hidden mt-10'>
+        <div className='min-h-[70vh] flex flex-col gap-36 overflow-hidden mt-20'>
             <div className='flex lg:gap-[20rem] md:gap-[10rem] gap-10 lg:px-[16rem] md:px-20 px-10'>
                 <div className='flex flex-col justify-between items-start'>
                     <h4 className='md:text-2xl text-sm'>Our Vision</h4>
