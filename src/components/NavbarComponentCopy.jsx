@@ -30,6 +30,23 @@ function NavbarComponentCopy() {
                 })
         })
 
+    const handleClick = addEventListener('click', (e) => {
+        try {
+            const target = e.target.id
+            const targetElement = document.querySelector(`#${target}-v`)
+            console.log(targetElement)
+            const offset = 100; // Space you want above the element
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: 'smooth'
+            });
+        } catch (e) {
+            return
+        }
+    }
+    )
+
     return (
         <nav className='flex w-full h-10 fixed font-vietnam z-10'>
 
@@ -39,12 +56,12 @@ function NavbarComponentCopy() {
             </div>
 
             {/*DYNAMIC NAVBAR`` */}
-            <div className='flex md:gap-5 gap-3 mt-4 mx-auto bg-[#849BEB] rounded-full items-center px-6 navbar z-10 w-fit h-10 text-white md:text-[16px] text-xs cursor-pointer'>
-                <a href='#hero' className='hover:scale-110 transition-all'>HOME</a>
-                <a href='#feature' className='hover:scale-110 transition-all'>FEATURE</a>
-                <a href='#services' className='hover:scale-110 transition-all'>SERVICES</a>
-                <a href='#vision' className='hover:scale-110 transition-all'>VISION</a>
-                <a href='#contact' className='hover:scale-110 transition-all'>CONTACT</a>
+            <div className='flex md:gap-5 gap-3 mt-4 md:mx-auto mx-10 bg-[#849BEB] rounded-full items-center px-6 navbar z-10 w-fit h-10 text-white md:text-[16px] text-xs cursor-pointer'>
+                <a id='hero' className='hover:scale-110 transition-all md:block hidden'>HOME</a>
+                <p id='feature' className='hover:scale-110 transition-all md:block hidden'>FEATURE</p>
+                <p id='services' className='hover:scale-110 transition-all'>SERVICES</p>
+                <p id='vision' className='hover:scale-110 transition-all'>VISION</p>
+                <p id='contact' className='hover:scale-110 transition-all'>CONTACT</p>
                 <button className='p-[4px] px-3 py-2 rounded-l-full rounded-r-full border-1 border-white text-nowrap text-black bg-white'>INSTALL APP</button>
             </div>
         </nav>

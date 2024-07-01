@@ -13,6 +13,22 @@ import all from '../assets/recharge/all.svg'
 import { Modal, Button } from "flowbite-react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 
+//change the first two src to change the popular logos
+const popularLogos = [
+    {
+        src: mobile,
+        content: "Recharge Prepaid Mobiles >"
+    },
+    {
+        src: bulb,
+        content: "Pay Electricity Bills >"
+    },
+    {
+        src: redar,
+        content: "Recharge DTH Connections >"
+    },
+]
+
 const logos = [
     {
         src: mobile,
@@ -136,6 +152,7 @@ function Recharge() {
             repeat: -1,
             ease: 'none',
         })
+
     })
 
     return (
@@ -143,31 +160,62 @@ function Recharge() {
             <h1 className='mx-auto text-center md:text-[40px] text-3xl'>Recharge And Pay Bills</h1>
 
             <img src={bg} alt="" className='absolute -z-10' />
-            <div className='w-fit mt-10 mx-auto translate-x-2'>
-                <img src={ball} alt="" className='lg:h-full w-fit h-[20vh] ' ref={ballRef} />
+
+            <div className='flex items-center justify-center'>
+
+                <div className='md:flex h-[10vh] w-fit lg:gap-30 gap-20 translate-x-28 -z-10 overflow-auto pl-4 drop-shadow-purple-dark l-parent md:visible hidden'>
+                    {
+                        popularLogos.map((logo, i) => (
+                            <div className='md:w-full w-[35vw] flex items-center justify-center'>
+                                <div className={`md:h-14 md:w-14 h-4 w-4 bg-gradient-to-b from-black to-[#7A5393] rounded-full mx-auto relative mt-10 cursor-pointer hover:scale-110 transition-all duration-300 l`} key={i}>
+                                    <img src={logos[0].src} alt="" className={`md:h-8 md:w-8 h-5 w-5 mx-auto relative md:top-3 top-3`} />
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <div className='w-fit mt-10'>
+                    <img src={ball} alt="" className='lg:h-[30vh] w-fit h-[20vh]' ref={ballRef} />
+                </div>
+
+                <div className='md:flex h-[10vh] w-fit lg:gap-30 gap-20 -translate-x-28 -z-10 overflow-auto pr-4 drop-shadow-purple-darkpurple r-parent md:visible hidden'>
+                    {
+                        popularLogos.map((logo, i) => (
+                            <div className='md:w-full w-[35vw] flex items-center justify-center'>
+                                <div className={`md:h-14 md:w-14 h-4 w-4 bg-gradient-to-b from-black to-[#7A5393] rounded-full mx-auto relative mt-10 cursor-pointer hover:scale-110 transition-all duration-300 r -z-10 r`} key={i}>
+                                    <img src={logos[1].src} alt="" className={`md:h-8 md:w-8 h-5 w-5 mx-auto relative md:top-3 top-3`} />
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
 
-            <div className='flex h-[40vh] gap-4 justify-evenly overflow-scroll md:flex-nowrap flex-wrap'>
+            <div className='w-[50vw] mx-auto  '>
+                <h1 className='text-center mt-10 lg:text-[3rem] md:text-[2rem] text-[1rem] text  mix-blend-difference'>Tokenization, but with a powerful and flexible encryption model</h1>
+            </div>
+
+            <div className='flex h-[25vh] gap-4 rounded-lg justify-evenly overflow-scroll md:flex-nowrap flex-wrap md:border-0 sm:border-0'>
                 {
                     logos.map((logo, i) => (
                         i !== 6 ?
-                            <div className='md:w-full w-[35vw] flex flex-col items-center justify-center'>
+                            <div className='md:w-full w-[35vw] flex flex-col items-center justify-start overflow-scroll'>
                                 <div className='md:h-20 md:w-20 h-10 w-10 bg-gradient-to-b from-black to-[#7A5393] rounded-full mx-auto relative mt-10 cursor-pointer hover:scale-110 transition-all duration-300' key={i}>
                                     <img src={logo.src} alt="" className='md:h-8 md:w-8 h-5 w-5 mx-auto relative md:top-6 top-3' />
                                 </div>
 
-                                <h1 className='md:text-xl text-xs h-10 md:w-[7vw] w-fit mx-auto mt-10 text-center'>{logo.content}</h1>
+                                <h1 className='md:text-xl text-xs h-10 md:w-[7vw] w-fit mx-auto mt-4 text-center'>{logo.content}</h1>
                             </div>
                             :
-                            <div className='md:w-full w-[35vw] flex flex-col items-center justify-center'>
+                            <div className='md:w-full w-[35vw] flex flex-col items-center justify-start'>
                                 <div className='md:h-20 md:w-20 h-10 w-10 bg-gradient-to-b from-black to-[#7A5393] rounded-full mx-auto relative mt-10 cursor-pointer hover:scale-110 transition-all duration-300 overflow-hidden' key={i} onClick={() => {
                                     setOpenModal(true);
-                                    window.scroll = false;
                                 }}>
                                     <img src={logo.src} alt="" className='md:h-8 md:w-8 h-5 w-5 mx-auto relative md:top-6 top-3' />
                                 </div>
 
-                                <h1 className='md:text-xl text-xs h-10 md:w-[7vw] w-fit mx-auto mt-10 text-center'>{logo.content}</h1>
+                                <h1 className='md:text-xl text-xs h-10 md:w-[7vw] w-fit mx-auto mt-4 text-center'>{logo.content}</h1>
                             </div>
                     ))
                 }

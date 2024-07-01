@@ -15,13 +15,13 @@ function App() {
   return (
     <main className='min-h-[200vh]'>
       <NavbarComponentCopy />
-      <div id='hero'>
+      <div id='hero-v'>
         <Hero />
       </div>
-      <div id='feature'>
+      <div id='feature-v'>
         <FeatureSection />
       </div>
-      <div className='mt-4' id='services'>
+      <div className='mt-4' id='services-v'>
         <Recharge />
       </div>
 
@@ -30,14 +30,14 @@ function App() {
           <Carousel>
             {
               slides.map((slide, i) => (
-                <video src={slide} loop muted autoFocus autoPlay type="video/mp4" id={`vid-${i}`} />
+                <video src={slide} loop muted autoFocus autoPlay type="video/mp4" id={`vid-${i}`} className='object-cover' />
               ))
             }
           </Carousel>
         </div>
       </div>
 
-      <div id='vision'>
+      <div id='vision-v'>
         <VisionInfo />
       </div>
     </main>

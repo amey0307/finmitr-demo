@@ -11,3 +11,33 @@ body{
     color: white;
     font-family: "Urbanist", sans-serif;
 }
+
+.r{
+    animation: toright 2s ease-in-out infinite;
+    transition: animation 2s ease-in-out;
+}
+
+.l{
+    animation: toleft 2s ease-in-out infinite;
+    transition: animation 2s ease-in-out;
+}
+
+@keyframes toright{
+    0%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(250%);
+    }
+    
+}
+
+@keyframes toleft{
+    0%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(-250%);
+    }
+    
+}

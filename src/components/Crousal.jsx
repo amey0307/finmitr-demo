@@ -38,8 +38,9 @@ export default function Carousel({
     }, [])
 
     return (
-        <div className="flex md:flex-row flex-col justify-evenly md:items-end items-center bg-[#3515355b] py-10 drop-shadow-purple-dark">
-            <div className="overflow-hidden relative lg:mx-10 rounded-lg lg:w-[55vw] w-[90vw] h-[50vh]">
+        //change the height of the carousel by changing the lg:h-[50vh] value
+        <div className="flex lg:flex-row flex-col justify-evenly lg:items-end items-center bg-[#3515355b] py-10 drop-shadow-purple-dark">
+            <div className="overflow-hidden relative lg:mx-10 rounded-lg lg:w-[50vw] w-[90vw] lg:h-fit md:h-fit h-[20vh]">
                 <div
                     className="flex transition-transform ease-out duration-500"
                     style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -74,7 +75,7 @@ export default function Carousel({
                 </div>
             </div>
 
-            <div className="flex justify-between items-end gap-10 rounded-2xl px-10 lg:w-[40vw] w-[100vw] md:mt-0 mt-10">
+            <div className="flex justify-between items-end gap-10 rounded-2xl px-10 lg:w-[40vw] w-[100vw] lg:mt-0 mt-10">
                 {
                     slides.map((slide, i) => (
                         <div className={`flex rounded-lg overflow-hidden transition-all duration-700 cursor-pointer gap-0 border object-cover ${curr === i ? "w-44 rounded-xl" : "w-20 opacity-50"}`} onClick={() => {
