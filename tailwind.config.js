@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       dropShadow: {
-        'purple': '2px 2px 25px rgba(160, 95, 156, 0.621)',
+        'purple': '2px 2px 25px rgba(110, 95, 156, 0.621)',
+        'purple-dark': '2px 2px 25px rgba(110, 95, 156, 0.221)',
       }
     },
   },
