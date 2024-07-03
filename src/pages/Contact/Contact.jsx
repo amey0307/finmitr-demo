@@ -1,8 +1,8 @@
 // src/ContactForm.js
 import React from 'react';
 import './ContactForm.css';
-import email from "../assests/images/🦆 icon _envelope closed_.png"
-import address from "../assests/images/Vector 23.png"
+import email from "../assets/images/🦆 icon _envelope closed_.png"
+import address from "../assets/images/Vector 23.png"
 const ContactForm = () => {
   return (
     <div className="contact-container">
