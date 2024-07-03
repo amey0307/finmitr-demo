@@ -1,5 +1,5 @@
 // src/ContactForm.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ContactForm.css';
 import email from "../../assets/images/🦆 icon _envelope closed_.png"
 import address from "../../assets/images/Vector 23.png"
@@ -8,6 +8,9 @@ import bg from '../../assets/hero/bg_radial_gradient.svg'
 import Footer from '../Footer/Footer';
 
 const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
   return (
     <>
       <NavbarComponentCopy />
