@@ -1,0 +1,157 @@
+
+.subscribe-section {
+    color: #ffebe5;
+    margin:0;
+    overflow: visible !important;    
+  }
+  
+  .subscribe-container {
+    background-color: #414044;
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap !important;
+  }
+
+  .left{
+    width: 50%;
+    padding-bottom: 5%;
+  }
+  .right{
+    width: 34%;
+    font-weight: lighter!important;
+    margin:4%;
+  } 
+  .subscribe-container h2 {
+    position: relative;
+    left: 10%;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+
+  }
+  
+  .subscribe-container h3 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    position: relative;
+    left: 20%;
+  }
+  
+  .subscribe-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .subscribe-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .subscribe-container input {
+    font-size: 16px;
+    border: none;
+    width: 80%;
+    background: none;
+    outline: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding: 20px;
+  }
+
+  
+  .subscribe-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .footer {
+    padding: 20px;
+  
+    color: #fff;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin-right:2em;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-social {
+    margin-top :  4em;
+  }
+  .footer-social img{
+    margin-right: 1em;
+  }
+  
+  .footer-copyright {
+    margin-top: 15em;
+    margin-left:10%;
+  }
+  @media screen and (max-width: 768px){
+    .left{
+        padding-bottom: 5%;
+        width: 100vw;
+        margin: 0 !important;;
+    }
+    .right{
+        font-weight: lighter!important;
+        margin:4%;
+        width: 100vw;
+    }
+    
+    .subscribe-container h3 {
+        font-size: 2em;
+        position: relative;
+        left: 0;
+        padding-left: 5%;
+      }
+      .subscribe-container h2 {
+        font-size: 1.5em;
+        position: relative;
+        left: 0;
+        padding-left: 5%;
+      }
+      .footer-copyright {
+        position: absolute;
+        top:98em;
+        text-align: center;
+        margin:0;
+      }
+      .footer-links ul {
+        margin-left:2em;
+      }
+      .footer-social {
+        margin-top :  2em;
+        margin-bottom:1em;
+      }
+      .footer-social img{
+        margin-left:3em;
+      }
+  }
