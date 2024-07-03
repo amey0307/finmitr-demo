@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import './Footer.css';
-import insta from "../assets/images/instagram.png";
-import phone from "../assets/images/call.png";
-import facebook from "../assets/images/facebook.png";
+import insta from "../../assets/images/instagram.png";
+import phone from "../../assets/images/call.png";
+import facebook from "../../assets/images/facebook.png";
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <div className="subscribe-section">
       <div className="subscribe-container">
-        <div className='left'>
+        <div className='flex items-start flex-col justify-center'>
           <h2>Subscribe</h2>
           <h3>Stay informed never <br></br>
             missed an update!</h3>
@@ -53,9 +53,9 @@ const Footer = () => {
             <img src={phone}></img>
           </div>
         </div>
-        <div className="footer-copyright">
+        {/* <div className="footer-copyright">
           <p>Copyright @Fineace 2022. All Rights Reserved.</p>
-        </div>
+        </div> */}
         <div className="footer-links">
           <ul>
             <li>Home</li>
@@ -71,9 +71,10 @@ const Footer = () => {
             <li>Terms of service</li>
           </ul>
         </div>
-
-
       </footer>
+      <div className="text-center md:mb-10 mb-4">
+        <p>Copyright @Finmitr 2022. All Rights Reserved.</p>
+      </div>
     </div>
   );
 };

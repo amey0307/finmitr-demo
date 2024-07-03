@@ -78,7 +78,7 @@ export default function Carousel({
             <div className="flex justify-between items-end gap-10 rounded-2xl px-10 lg:w-[40vw] w-[100vw] lg:mt-0 mt-10">
                 {
                     slides.map((slide, i) => (
-                        <div className={`flex rounded-lg overflow-hidden transition-all duration-700 cursor-pointer gap-0 border object-cover ${curr === i ? "w-44 rounded-xl" : "w-20 opacity-50"}`} onClick={() => {
+                        <div className={`flex rounded-lg overflow-hidden transition-all duration-700 cursor-pointer gap-0 border object-cover ${curr === i ? "w-44 lg:rounded-xl md:rounded-lg" : "w-20 opacity-50"}`} onClick={() => {
                             setCurr(i)
                         }} key={i}>
                             {slide}

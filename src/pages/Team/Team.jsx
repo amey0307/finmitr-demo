@@ -1,8 +1,8 @@
 import Card from "./Card.jsx";
 import { useEffect, useState } from "react";
-import imgg1 from "../assets/images/image 17.png";
-import imgg2 from "../assets/images/image 18.png";
-import 'team.css';
+import imgg1 from "../../assets/images/image_17.png";
+import imgg2 from "../../assets/images/image_18.png";
+import './team.css';
 const Team = () => {
     const lorem20 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 

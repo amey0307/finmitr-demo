@@ -8,6 +8,9 @@ import Carousel from './components/Crousal.jsx'
 import img1 from "./assets/crousal/v1.mp4"
 import img2 from "./assets/crousal/v2.mp4";
 import img3 from "./assets/crousal/v3.mp4";
+import Footer from './pages/Footer/Footer.jsx'
+import ContactForm from './pages/Contact/Contact.jsx'
+import Team from './pages/Team/Team.jsx'
 
 const slides = [img1, img2, img3, img1, img2];
 
@@ -15,16 +18,21 @@ function App() {
   return (
     <main className='min-h-[200vh]'>
       <NavbarComponentCopy />
+
       <div id='hero-v'>
         <Hero />
       </div>
+
       <div id='feature-v'>
         <FeatureSection />
       </div>
+
+      {/* this */}
       <div className='mt-4' id='services-v'>
         <Recharge />
       </div>
 
+      {/* this */}
       <div className="relative">
         <div className="">
           <Carousel>
@@ -37,8 +45,12 @@ function App() {
         </div>
       </div>
 
-      <div id='vision-v'>
+      <div id='contact-v'>
         <VisionInfo />
+      </div>
+
+      <div id='connect-v'>
+        <Footer />
       </div>
     </main>
   )

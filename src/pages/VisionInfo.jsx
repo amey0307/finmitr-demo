@@ -2,6 +2,7 @@ import React from 'react'
 import growth from '../assets/vision/growth.svg'
 import folder from '../assets/vision/folder.svg'
 import wallet from '../assets/vision/wallet.svg'
+import { Link } from 'react-router-dom'
 
 function VisionInfo() {
     return (
@@ -13,7 +14,11 @@ function VisionInfo() {
                 </div>
                 <div className='flex flex-col gap-10 justify-between items-start'>
                     <p className='md:text-lg text-xs text-balance'>Our mission is to demystify financial management in India, providing intuitive and powerful tools to enhance financial health for everyone. We aim to be the financial compass for navigating economic well-being.</p>
-                    <button className='bg-[#849BEB] md:p-4 p-2 rounded-md'>Contact Us</button>
+                    <Link to={'contact-us'}>
+                        <button className='bg-[#849BEB] md:p-4 p-2 rounded-md hover:scale-105 transition-all ease-linear duration-100'>
+                            CONTACT US
+                        </button>
+                    </Link>
                 </div>
             </div>
 
