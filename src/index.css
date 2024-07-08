@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+::-webkit-scrollbar {
+    display: none;
+  }
 *{
     scroll-behavior: smooth;
 }
@@ -40,4 +44,16 @@ body{
         transform: translateX(-250%);
     }
     
+}
+.install{
+    position: absolute;
+    left: 68.5%;
+    top:100%;
+}
+.sdbar{
+    height: 2em;
+}
+.blur {
+    filter: blur(5px);
+    transition: all 0.5s ease-in-out;
 }
