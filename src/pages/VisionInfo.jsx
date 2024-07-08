@@ -24,17 +24,17 @@ function VisionInfo() {
 
             <div>
                 <div className='md:flex md:flex-row flex-col gap-10 md:px-[5rem] justify-center -mt-10'>
-                    <div className='flex flex-col gap-5 justify-center items-center bg-white text-black lg:p-4 md:w-[25vw] md:h-[25vh] w-[65vw] mx-auto m-10 p-4 rounded-xl'>
+                    <div className='flex flex-col gap-5 justify-center items-center bg-white text-black lg:p-4 md:w-[25vw] md:h-[40vh] w-[65vw] mx-auto m-10 p-4 rounded-xl'>
                         <img src={growth} alt="" className='w-20 h-20' />
                         <h2 className='text-2xl'>Growth</h2>
                         <p className='lg:text-lg md:text-sm text-sm text-center text-balance'>We believe in the power of growth. We are committed to helping our customers grow their wealth and achieve financial success.</p>
                     </div>
-                    <div className='flex flex-col gap-5 justify-center items-center bg-white text-black p-4 md:w-[25vw] md:h-[25vh] w-[65vw] m-10 mx-auto rounded-xl'>
+                    <div className='flex flex-col gap-5 justify-center items-center bg-white text-black p-4 md:w-[25vw] md:h-[40vh] w-[65vw] m-10 mx-auto rounded-xl'>
                         <img src={folder} alt="" className='w-20 h-20' />
                         <h2 className='text-2xl'>Transparency</h2>
                         <p className='lg:text-lg md:text-sm text-sm text-center text-balance'>We believe in the power of growth. We are committed to helping our customers grow their wealth and achieve financial success.</p>
                     </div>
-                    <div className='flex flex-col gap-5 justify-center items-center bg-white text-black p-4 md:w-[25vw] md:h-[25vh] w-[65vw] m-10 mx-auto rounded-xl'>
+                    <div className='flex flex-col gap-5 justify-center items-center bg-white text-black p-4 md:w-[25vw] md:h-[40vh] w-[65vw] m-10 mx-auto rounded-xl'>
                         <img src={wallet} alt="" className='w-20 h-20' />
                         <h2 className='text-2xl'>Security</h2>
                         <p className='lg:text-lg md:text-sm text-sm text-center text-balance'>We believe in the power of growth. We are committed to helping our customers grow their wealth and achieve financial success.</p>
