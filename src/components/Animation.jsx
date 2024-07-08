@@ -55,9 +55,9 @@ function Animation() {
                 end: 'center center',
                 scrub: 1,
             },
-            rotate: -360,
-            repeat: 1,
-            ease: 'none'
+            rotate: 360,
+            scale: 0,
+            ease: 'power1.inOut'
         })
 
         gsap.from('.txt', {
@@ -74,7 +74,7 @@ function Animation() {
     return (
         <div className='w-full mx-auto'>
             <div className='box-c w-[40vw] h-[40vh] mx-auto relative'>
-                <div className='red w-52 h-52 rounded-full bg-[#ff38388a] absolute top-[10%] right-[36%]'></div>
+                <div className='red w-52 h-52 rounded-full bg-[#ff38388a] absolute top-[10%] lg:right-[36%] md:right-[30%] right-[15%]'></div>
                 <div className='green w-52 h-52 rounded-full bg-[#71f36d6a] absolute top-[35%] right-[47%]'></div>
                 <div className='blue w-52 h-52 rounded-full bg-[#446dff7d] absolute top-[35%] left-[47%]'></div>
                 <h1 className='txt absolute top-[52%] right-[10%] text-xl'>Finmitr</h1>
