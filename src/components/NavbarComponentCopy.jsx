@@ -6,9 +6,19 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
-
-function NavbarComponentCopy({ sidebarOpen, setSidebarOpen}) {
+import Logo from "../assets/images/Transparent-PNG-file.png";
+function NavbarComponentCopy() {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 700);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [animationClass, setAnimationClass] = useState('');
+
+    useEffect(() => {
+        if (sidebarOpen) {
+            setAnimationClass('slide-in ');
+        } else {
+            setAnimationClass('slide-out blur');
+        }
+    }, [sidebarOpen]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -85,25 +95,35 @@ function NavbarComponentCopy({ sidebarOpen, setSidebarOpen}) {
 
                 {/* Toggle button for small screens */}
                 {isSmallScreen && (
-                    <button onClick={toggleSidebar} className='ml-auto mt-2 h-12 w-20 mr-4  text-white bg-[#849BEB] p-3 rounded'>
-                        {sidebarOpen ? 'Close' : 'Menu'}
-                    </button>
+                    <div>
+                        <img className="logoSidebar2" src={Logo} alt="img"></img>
+                        <button onClick={toggleSidebar} className='ml-auto mt-2 h-12 w-20 mr-4  text-white bg-[#849BEB] p-3 rounded menu'>
+                            {sidebarOpen ? 'Close' : 'Menu'}
+                        </button>
+                    </div>
+
+
                 )}
             </div>
 
             {/* Sidebar for small screens */}
             {isSmallScreen && sidebarOpen && (
-                <div className='sdbar'>
-                    <div  className='fixed top-0 p-4  left-0 w-3/4 h-full bg-black-1000  z-20 flex flex-col items-start p-3 text-white'>
-                        <Link to='/' onClick={toggleSidebar}><a id='hero' className=' hover:scale-110 transition-all'>HOME</a></Link>
-                        <Link to='/' onClick={toggleSidebar}><p id='feature' className=' hover:scale-110 transition-all'>FEATURE</p></Link>
-                        <Link to='/' onClick={toggleSidebar}><p id='services' className=' hover:scale-110 transition-all'>SERVICES</p></Link>
-                        <Link to='/' onClick={toggleSidebar}><p id='contact' className='hover:scale-110 transition-all'>CONTACT</p></Link>
-                        <Link to='/' onClick={toggleSidebar}><p id='connect' className=' hover:scale-110 transition-all'>CONNECT</p></Link>
+                <div className={`div-slide ${animationClass}`}>
+                    <div className='sdbar'>
+                        <div className='fixed top-0 p-4  left-0 w-3/4 h-full bg-black-1000  z-20 flex flex-col items-start p-3 text-white'>
+                            <img className="logoSidebar" src={Logo} alt="img"></img>
+                            <Link to='/' onClick={toggleSidebar}><p id='hero' className='it hover:scale-110 transition-all'>HOME</p></Link>
+                            <Link to='/' onClick={toggleSidebar}><p id='feature' className='it hover:scale-110 transition-all'>FEATURE</p></Link>
+                            <Link to='/' onClick={toggleSidebar}><p id='services' className='it hover:scale-110 transition-all'>SERVICES</p></Link>
+                            <Link to='/' onClick={toggleSidebar}><p id='contact' className=' it hover:scale-110 transition-all'>CONTACT</p></Link>
+                            <Link to='/' onClick={toggleSidebar}><p id='connect' className='it hover:scale-110 transition-all'>CONNECT</p></Link>
+                            <button className='p-2 px-3 py-2  rounded  border-1 border-white text-black bg-white install'>INSTALL APP</button>
+                        </div>
+
                     </div>
-               
-                    <button className='p-2 px-3 py-2  rounded  border-1 border-white text-black bg-white install'>INSTALL APP</button>
                 </div>
+
+
             )}
         </nav>
     );

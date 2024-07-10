@@ -10,16 +10,14 @@ import img2 from "./assets/crousal/v2.mp4";
 import img3 from "./assets/crousal/v3.mp4";
 import Footer from './pages/Footer/Footer.jsx';
 import Animation from './components/Animation.jsx'
-import { useState } from 'react'; 
+import { useState,useEffect } from 'react'; 
 const slides = [img1, img2, img3, img1, img2];
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  
   return (
     <main  >
-      <NavbarComponentCopy sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-      <div className={sidebarOpen ? 'blur' : ''}>
+      <NavbarComponentCopy />
       <div id='hero-v'>
         <Hero />
       </div>
@@ -56,7 +54,6 @@ function App() {
 
       <div id='connect-v'>
         <Footer />
-      </div>
       </div>
     </main>
   )
