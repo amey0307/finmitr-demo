@@ -3,8 +3,11 @@ import growth from '../assets/vision/growth.svg'
 import folder from '../assets/vision/folder.svg'
 import wallet from '../assets/vision/wallet.svg'
 import { Link } from 'react-router-dom'
+import { Modal, Button } from "flowbite-react";
 
 function VisionInfo() {
+    const [showContact, setShowContact] = React.useState(false);
+
     return (
         <div className='min-h-[70vh] flex flex-col gap-36 overflow-hidden mt-20'>
             <div className='flex lg:gap-[20rem] md:gap-[10rem] gap-10 lg:px-[16rem] md:px-20 px-10'>
@@ -14,11 +17,9 @@ function VisionInfo() {
                 </div>
                 <div className='flex flex-col gap-10 justify-between items-start'>
                     <p className='md:text-lg text-xs text-balance'>Our mission is to demystify financial management in India, providing intuitive and powerful tools to enhance financial health for everyone. We aim to be the financial compass for navigating economic well-being.</p>
-                    <Link to={'contact-us'}>
-                        <button className='bg-[#849BEB] md:p-4 p-2 rounded-md hover:scale-105 transition-all ease-linear duration-100'>
-                            CONTACT US
-                        </button>
-                    </Link>
+                    <button className='bg-[#849BEB] md:p-4 p-2 rounded-md hover:scale-105 transition-all ease-linear duration-100' onClick={() => { setShowContact(true) }}>
+                        CONTACT US
+                    </button>
                 </div>
             </div>
 
@@ -41,6 +42,52 @@ function VisionInfo() {
                     </div>
                 </div>
             </div>
+
+
+            {showContact && (
+                <Modal show={showContact} size="md" onClose={() => setOpenModal(false)} popup className='bg-[#131114a9] p-20'>
+                    <Modal.Body className=''>
+                        <div className="text-center min-h-[80vh] h-fit bg-gradient-to-br from-[#1a1818d5] rounded-lg">
+
+                            <div className='flex h-fit gap-4 justify-evenly flex-wrap mb-10'>
+                                <div className=" w-full contact-container">
+                                    <div className="contact-form mt-40 mb-20">
+                                        <h2>Contact Us</h2>
+                                        <form>
+                                            <input type="text" name="name" placeholder="Name" />
+                                            <input type="email" name="email" placeholder="Email" />
+                                            <input type="tel" name="phone" placeholder="Phone Number" />
+                                            <textarea name="message" placeholder="Message"></textarea>
+                                            <button type="submit">SEND ➔</button>
+                                        </form>
+                                    </div>
+                                    <div className="contact-info">
+                                        <div className="info-item">
+                                            <div className='item'>
+                                                <div className='p-10'>
+                                                    <h2>Email Us At</h2>
+                                                    <p><a href="mailto:aravind@nibo.tech">aravind@nibo.tech</a></p>
+                                                </div>
+                                            </div>
+                                        </div >
+                                        <div className="info-item">
+                                            <div className='item'>
+                                                <div className='p-10'>
+                                                    <h2>Reach Us At</h2>
+                                                    <p>Address</p>
+                                                </div>
+                                            </div>
+                                        </div >
+                                    </div>
+                                </div>
+                            </div>
+                            <Button onClick={() => setShowContact(false)} className='bg-purple-700 relative md:bottom-10 md:left-[35vw] mx-auto bottom-4'>
+                                Cancel
+                            </Button>
+                        </div>
+                    </Modal.Body>
+                </Modal>
+            )}
         </div>
     )
 }

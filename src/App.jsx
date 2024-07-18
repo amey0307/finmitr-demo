@@ -10,11 +10,11 @@ import img2 from "./assets/crousal/v2.mp4";
 import img3 from "./assets/crousal/v3.mp4";
 import Footer from './pages/Footer/Footer.jsx';
 import Animation from './components/Animation.jsx'
-import { useState,useEffect } from 'react'; 
+import { useState, useEffect } from 'react';
 const slides = [img1, img2, img3, img1, img2];
 
 function App() {
-  
+
   return (
     <main  >
       <NavbarComponentCopy />
@@ -29,10 +29,6 @@ function App() {
       {/* this */}
       <div className='mt-4' id='services-v'>
         <Recharge />
-      </div>
-
-      <div>
-        <Animation />
       </div>
 
       {/* this */}
